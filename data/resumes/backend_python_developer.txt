@@ -1,0 +1,25 @@
+Karan Malhotra
+karan.malhotra@example.com
+
+Summary
+Backend engineer focused on Python APIs, databases and cloud deployments.
+
+Experience
+Backend Engineer, Proseware Inc    Jan 2021 - Present
+- Built high-throughput REST APIs with FastAPI and Django serving 5,000 requests per second
+- Designed PostgreSQL schemas and Redis caching layers, reducing p95 latency by 45%
+- Containerised services with Docker and deployed them to Kubernetes on Google Cloud (GKE)
+- Wrote automated tests with pytest and maintained CI/CD pipelines in GitLab CI
+- Built Kafka consumers for event-driven microservices
+
+Software Engineer, Alpine Ski House    Jul 2019 - Dec 2020
+- Developed internal tools with Flask and SQL, and scripted deployments with Bash on Linux
+
+Projects
+Personal project: deployed a scikit-learn model behind a FastAPI endpoint as a learning exercise
+
+Skills
+Python, FastAPI, Django, Flask, PostgreSQL, Redis, Docker, Kubernetes, GCP, Kafka, Git, Linux, SQL
+
+Education
+B.Tech in Computer Science, Eastern Technical University, 2019

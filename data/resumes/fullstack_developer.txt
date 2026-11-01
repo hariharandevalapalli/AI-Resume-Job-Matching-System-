@@ -1,0 +1,22 @@
+Sneha Iyer
+sneha.iyer@example.com | github.com/sneha-example
+
+Summary
+Full-stack developer with 4 years of experience building responsive web applications with React and Node.js.
+
+Experience
+Full Stack Developer, Adventure Works    May 2022 - Present
+- Built customer-facing features in React, TypeScript and Next.js used by 200k monthly users
+- Designed REST APIs and GraphQL endpoints with Node.js and Express.js backed by MongoDB and PostgreSQL
+- Implemented unit tests with Jest and end-to-end tests with Cypress, raising coverage to 85%
+- Set up CI/CD pipelines with GitHub Actions and deployed services with Docker on AWS
+
+Frontend Developer, Blue Yonder Digital    Jun 2020 - Apr 2022
+- Developed reusable UI components with React, HTML, CSS and Tailwind CSS
+- Worked in an Agile Scrum team, collaborating with designers in Figma
+
+Skills
+JavaScript, TypeScript, React, Next.js, Node.js, Express.js, HTML, CSS, Tailwind CSS, MongoDB, PostgreSQL, GraphQL, Docker, Git, Jest
+
+Education
+Bachelor of Engineering in Computer Engineering, Western Institute, 2020

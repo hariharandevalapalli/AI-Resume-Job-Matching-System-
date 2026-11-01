@@ -1,0 +1,114 @@
+# Scoring configuration for the AI Resume-Job Matcher.
+#
+# Every number that influences a score lives in this file, so the methodology
+# stays transparent and changes are versioned. Bump `version` whenever you
+# change weights or rules; the config fingerprint is reported with every
+# result and stored with every evaluation run.
+
+version: "1.0.0"
+model_name: explainable-tfidf-skill-matcher
+
+# Relative importance of each score component. Weights do not need to sum to
+# 1: components that cannot be computed for a job description (for example
+# no education requirement) are excluded and the rest are re-normalised.
+weights:
+  required_skills: 0.45
+  preferred_skills: 0.15
+  text_similarity: 0.25
+  experience: 0.10
+  education: 0.05
+
+skill_matching:
+  # Credit for a skill that appears in experience / projects / achievements.
+  demonstrated_credit: 1.0
+  # Credit for a skill that only appears in a skills list or summary.
+  listed_only_credit: 0.85
+  # Credit when the resume has a closely related skill (e.g. TensorFlow for PyTorch).
+  related_skill_credit: 0.5
+  # Category multipliers applied when averaging skill coverage. Soft skills
+  # are rarely written explicitly in resumes, so they count for less.
+  category_weights:
+    soft_skills: 0.5
+  # Resume sections whose mentions count as "demonstrated" evidence.
+  demonstrated_sections: [experience, projects, achievements, publications]
+  # Lines outside known sections with at least this many words also count as demonstrated.
+  min_words_for_sentence_evidence: 8
+  max_evidence_per_skill: 3
+
+tfidf:
+  ngram_range: [1, 2]
+  sublinear_tf: true
+  max_features: 5000
+  # Raw cosine similarity between a resume and a job description rarely
+  # exceeds ~0.5 even for excellent matches. The cosine is divided by this
+  # value and capped at 1.0 to obtain the text-similarity component.
+  saturation: 0.5
+  top_terms: 12
+  # Generic resume/job-ad words removed in addition to scikit-learn's English stop words,
+  # so shared terms reflect substance rather than boilerplate.
+  extra_stop_words: [experience, experienced, years, year, work, worked, working, team, teams, strong, ability,
+    skills, skill, knowledge, including, using, used, use, responsible, responsibilities, requirements, required,
+    preferred, plus, role, candidate, looking, join, company, job, etc, new, good, great, excellent, related,
+    field, level, based, help, ensure]
+
+experience:
+  # Score = min(1, candidate_years / required_years).
+  # When a resume has no detectable experience the component scores 0.
+  max_reasonable_years: 50
+
+education:
+  levels:
+    high_school: 1
+    diploma: 1.5
+    bachelor: 2
+    master: 3
+    phd: 4
+  # Credit when the highest degree is exactly one level below the requirement.
+  one_level_below_credit: 0.5
+
+# Score bands, evaluated top to bottom.
+bands:
+  - {min_score: 75, label: Strong match}
+  - {min_score: 60, label: Good match}
+  - {min_score: 40, label: Partial match}
+  - {min_score: 0, label: Low match}
+
+resume_sections:
+  summary: [summary, professional summary, profile, professional profile, objective, career objective, about me, about]
+  experience: [experience, work experience, professional experience, employment history, employment, work history, internships, internship, internship experience, relevant experience]
+  projects: [projects, personal projects, academic projects, key projects, project experience, selected projects]
+  skills: [skills, technical skills, core skills, key skills, skills and tools, technologies, tech stack, core competencies, tools, tools and technologies, skills summary]
+  education: [education, academic background, academic qualifications, education and training, qualifications]
+  certifications: [certifications, certificates, licenses and certifications, courses, training, certifications and courses]
+  achievements: [achievements, awards, honors, honours, accomplishments, awards and achievements]
+  publications: [publications, research, research experience]
+
+jd_parsing:
+  required_headers: [requirements, required, required skills, required qualifications, minimum qualifications, basic qualifications, must have, must haves, what you need, what you will need, what we are looking for, qualifications, who you are, skills, responsibilities, what you will do, key responsibilities, the role, your role]
+  preferred_headers: [preferred, preferred qualifications, preferred skills, nice to have, nice to haves, bonus, bonus points, good to have, additional qualifications, desirable, plus]
+  ignored_headers: [about us, about the company, who we are, benefits, perks, what we offer, compensation, equal opportunity, how to apply, our values, perks and benefits]
+  preferred_cues: [preferred, nice to have, nice-to-have, a plus, is a plus, are a plus, bonus, good to have, desirable, advantageous, ideally, familiarity with, exposure to, would be great]
+  # Clauses inside a "preferred" section that contain one of these are treated as required.
+  required_cues: [required, must, mandatory, essential]
+
+limits:
+  max_file_size_mb: 5
+  max_pdf_pages: 10
+  max_resumes_compare: 10
+  min_resume_chars: 100
+  min_jd_chars: 50
+  max_jd_chars: 20000
+  max_resume_chars: 60000
+
+privacy:
+  # Resumes are processed in memory and never written to disk by the app.
+  store_resumes: false
+  redact_pii_in_preview: true
+  preview_chars: 600
+
+recommendations:
+  max_items: 8
+  low_similarity_threshold: 0.45
+  min_resume_words: 200
+  max_resume_words: 1100
+  min_quantified_lines: 2

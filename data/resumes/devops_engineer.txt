@@ -1,0 +1,22 @@
+Vikram Singh
+vikram.singh@example.com
+
+Summary
+DevOps engineer with 6 years of experience automating infrastructure and delivery pipelines.
+
+Experience
+DevOps Engineer, Trey Research    Apr 2020 - Present
+- Managed Kubernetes clusters on AWS (EKS) and Azure (AKS) running 120 microservices
+- Wrote Terraform modules and Ansible playbooks for infrastructure as code
+- Built CI/CD pipelines with Jenkins and GitHub Actions, cutting release time from days to hours
+- Set up monitoring with Prometheus and Grafana and on-call runbooks
+
+System Administrator, Fourth Coffee    Jan 2018 - Mar 2020
+- Administered Linux servers and wrote Bash and Python automation scripts
+- Containerised legacy applications with Docker
+
+Skills
+Kubernetes, Docker, Terraform, Ansible, AWS, Azure, Jenkins, GitHub Actions, Prometheus, Grafana, Linux, Bash, Python, Git
+
+Education
+Bachelor of Engineering in Electronics, North Valley College, 2017

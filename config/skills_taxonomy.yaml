@@ -1,0 +1,605 @@
+# Skill taxonomy used for rule-based skill extraction.
+#
+# Each skill has a canonical name, a category, and aliases. Aliases are matched
+# case-insensitively with technology-aware word boundaries (so "Java" does not
+# match "JavaScript" and "C" does not match "C++"). Ambiguous aliases such as
+# "Go", "R" or "React" go in `case_sensitive_aliases` and must match exactly.
+# `related` skills earn partial credit when the exact skill is missing.
+# Resource links point to official documentation or well-known free courses.
+
+version: "1.0.0"
+
+categories:
+  programming_languages:
+    label: Programming Languages
+    learning_weeks: 6
+    practice_project: Build a small command-line tool and publish it with tests and a README.
+  web_development:
+    label: Web Development
+    learning_weeks: 4
+    practice_project: Build and deploy a small CRUD web app with authentication.
+  data_science:
+    label: Data Science & Analytics
+    learning_weeks: 4
+    practice_project: Analyse a public dataset end to end and publish a notebook with clear findings.
+  machine_learning:
+    label: Machine Learning & AI
+    learning_weeks: 6
+    practice_project: Train, evaluate and document a model on a public dataset, including a baseline comparison.
+  mlops_devops:
+    label: MLOps & DevOps
+    learning_weeks: 3
+    practice_project: Containerise an existing project and add automated tests and a deployment pipeline.
+  cloud:
+    label: Cloud Platforms
+    learning_weeks: 4
+    practice_project: Deploy a small API on a free cloud tier and document the architecture.
+  databases:
+    label: Databases & Data Engineering
+    learning_weeks: 3
+    practice_project: Design a schema, load sample data, and write analytical queries for it.
+  tools_practices:
+    label: Tools & Practices
+    learning_weeks: 2
+    practice_project: Apply the practice in a team or open-source project and describe the outcome.
+  mobile:
+    label: Mobile Development
+    learning_weeks: 6
+    practice_project: Build and publish a small mobile app with offline storage.
+  soft_skills:
+    label: Soft Skills
+    learning_weeks: 2
+    practice_project: Lead a small initiative (study group, club project, open-source issue) and document the outcome.
+
+skills:
+  # ---------------- Programming languages ----------------
+  - name: Python
+    category: programming_languages
+    aliases: [python, python3]
+    resources:
+      - {title: Official Python Tutorial, url: "https://docs.python.org/3/tutorial/"}
+  - name: Java
+    category: programming_languages
+    aliases: [java]
+    related: [Kotlin, C#]
+    resources:
+      - {title: Learn Java (dev.java), url: "https://dev.java/learn/"}
+  - name: JavaScript
+    category: programming_languages
+    aliases: [javascript, ecmascript, es6]
+    case_sensitive_aliases: [JS]
+    related: [TypeScript]
+    resources:
+      - {title: MDN JavaScript Guide, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"}
+  - name: TypeScript
+    category: programming_languages
+    aliases: [typescript]
+    case_sensitive_aliases: [TS]
+    related: [JavaScript]
+    resources:
+      - {title: TypeScript Handbook, url: "https://www.typescriptlang.org/docs/handbook/intro.html"}
+  - name: C++
+    category: programming_languages
+    aliases: [c++, cpp]
+    related: [C]
+    resources:
+      - {title: LearnCpp, url: "https://www.learncpp.com/"}
+  - name: C
+    category: programming_languages
+    aliases: []
+    case_sensitive_aliases: [C]
+    related: [C++]
+  - name: C#
+    category: programming_languages
+    aliases: [c#, csharp]
+    related: [Java]
+    resources:
+      - {title: C# documentation, url: "https://learn.microsoft.com/en-us/dotnet/csharp/"}
+  - name: Go
+    category: programming_languages
+    aliases: [golang]
+    case_sensitive_aliases: [Go]
+    resources:
+      - {title: A Tour of Go, url: "https://go.dev/tour/"}
+  - name: Rust
+    category: programming_languages
+    aliases: []
+    case_sensitive_aliases: [Rust]
+    resources:
+      - {title: The Rust Programming Language, url: "https://doc.rust-lang.org/book/"}
+  - name: Kotlin
+    category: programming_languages
+    aliases: [kotlin]
+    related: [Java]
+    resources:
+      - {title: Kotlin docs, url: "https://kotlinlang.org/docs/home.html"}
+  - name: Swift
+    category: programming_languages
+    aliases: []
+    case_sensitive_aliases: [Swift, SwiftUI]
+    resources:
+      - {title: Swift documentation, url: "https://www.swift.org/documentation/"}
+  - name: PHP
+    category: programming_languages
+    aliases: [php]
+    resources:
+      - {title: PHP Manual, url: "https://www.php.net/manual/en/"}
+  - name: Ruby
+    category: programming_languages
+    aliases: [ruby]
+    resources:
+      - {title: Ruby documentation, url: "https://www.ruby-lang.org/en/documentation/"}
+  - name: R
+    category: programming_languages
+    aliases: [r programming, rstudio]
+    case_sensitive_aliases: [R]
+    related: [Python]
+  - name: Scala
+    category: programming_languages
+    aliases: [scala]
+  - name: SQL
+    category: databases
+    aliases: [sql, t-sql, pl/sql]
+    resources:
+      - {title: PostgreSQL Tutorial (official), url: "https://www.postgresql.org/docs/current/tutorial.html"}
+  - name: Bash
+    category: tools_practices
+    aliases: [bash, shell scripting, shell scripts, powershell]
+    resources:
+      - {title: GNU Bash Manual, url: "https://www.gnu.org/software/bash/manual/"}
+
+  # ---------------- Web development ----------------
+  - name: HTML
+    category: web_development
+    aliases: [html, html5]
+    resources:
+      - {title: MDN HTML, url: "https://developer.mozilla.org/en-US/docs/Web/HTML"}
+  - name: CSS
+    category: web_development
+    aliases: [css, css3, sass, scss]
+    resources:
+      - {title: MDN CSS, url: "https://developer.mozilla.org/en-US/docs/Web/CSS"}
+  - name: React
+    category: web_development
+    aliases: [react.js, reactjs, react js]
+    case_sensitive_aliases: [React]
+    related: [Angular, Vue.js, Next.js]
+    resources:
+      - {title: React - Learn, url: "https://react.dev/learn"}
+  - name: React Native
+    category: mobile
+    aliases: [react native]
+    related: [Flutter]
+  - name: Angular
+    category: web_development
+    aliases: [angular, angularjs]
+    related: [React, Vue.js]
+    resources:
+      - {title: Angular docs, url: "https://angular.dev/"}
+  - name: Vue.js
+    category: web_development
+    aliases: [vue, vue.js, vuejs]
+    related: [React, Angular]
+    resources:
+      - {title: Vue.js Guide, url: "https://vuejs.org/guide/introduction.html"}
+  - name: Next.js
+    category: web_development
+    aliases: [next.js, nextjs]
+    related: [React]
+    resources:
+      - {title: Next.js Learn, url: "https://nextjs.org/learn"}
+  - name: Node.js
+    category: web_development
+    aliases: [node.js, nodejs, node js]
+    resources:
+      - {title: Learn Node.js, url: "https://nodejs.org/en/learn"}
+  - name: Express.js
+    category: web_development
+    aliases: [express.js, expressjs]
+    related: [FastAPI, Flask]
+  - name: Django
+    category: web_development
+    aliases: [django]
+    related: [Flask, FastAPI]
+    resources:
+      - {title: Django tutorial, url: "https://docs.djangoproject.com/en/stable/intro/tutorial01/"}
+  - name: Flask
+    category: web_development
+    aliases: [flask]
+    related: [FastAPI, Django]
+    resources:
+      - {title: Flask documentation, url: "https://flask.palletsprojects.com/"}
+  - name: FastAPI
+    category: web_development
+    aliases: [fastapi]
+    related: [Flask, Django]
+    resources:
+      - {title: FastAPI Tutorial, url: "https://fastapi.tiangolo.com/tutorial/"}
+  - name: Spring Boot
+    category: web_development
+    aliases: [spring boot, spring framework, spring mvc]
+    resources:
+      - {title: Spring Guides, url: "https://spring.io/guides"}
+  - name: Ruby on Rails
+    category: web_development
+    aliases: [ruby on rails, rails]
+    related: [Django]
+  - name: ASP.NET
+    category: web_development
+    aliases: [asp.net, .net core, .net, dotnet]
+    related: [Spring Boot]
+  - name: Tailwind CSS
+    category: web_development
+    aliases: [tailwind css, tailwindcss, tailwind]
+    related: [CSS]
+  - name: REST APIs
+    category: web_development
+    aliases: [rest api, rest apis, restful, restful apis, restful api, rest services]
+    related: [GraphQL]
+  - name: GraphQL
+    category: web_development
+    aliases: [graphql]
+    related: [REST APIs]
+    resources:
+      - {title: Learn GraphQL, url: "https://graphql.org/learn/"}
+  - name: Microservices
+    category: web_development
+    aliases: [microservices, microservice architecture, micro-services]
+
+  # ---------------- Data science ----------------
+  - name: Pandas
+    category: data_science
+    aliases: [pandas]
+    resources:
+      - {title: pandas User Guide, url: "https://pandas.pydata.org/docs/user_guide/index.html"}
+  - name: NumPy
+    category: data_science
+    aliases: [numpy]
+    resources:
+      - {title: NumPy user guide, url: "https://numpy.org/doc/stable/user/index.html"}
+  - name: Statistics
+    category: data_science
+    aliases: [statistics, statistical analysis, statistical modeling, statistical modelling, hypothesis testing, inferential statistics]
+    resources:
+      - {title: Khan Academy Statistics, url: "https://www.khanacademy.org/math/statistics-probability"}
+  - name: Data Analysis
+    category: data_science
+    aliases: [data analysis, data analytics, exploratory data analysis, eda, data analyst]
+  - name: Data Visualization
+    category: data_science
+    aliases: [data visualization, data visualisation, dashboards, dashboarding]
+  - name: Matplotlib
+    category: data_science
+    aliases: [matplotlib]
+    related: [Seaborn, Plotly]
+    resources:
+      - {title: Matplotlib documentation, url: "https://matplotlib.org/stable/"}
+  - name: Seaborn
+    category: data_science
+    aliases: [seaborn]
+    related: [Matplotlib, Plotly]
+  - name: Plotly
+    category: data_science
+    aliases: [plotly]
+    related: [Matplotlib, Seaborn]
+    resources:
+      - {title: Plotly Python, url: "https://plotly.com/python/"}
+  - name: Tableau
+    category: data_science
+    aliases: [tableau]
+    related: [Power BI]
+    resources:
+      - {title: Tableau free training, url: "https://www.tableau.com/learn/training"}
+  - name: Power BI
+    category: data_science
+    aliases: [power bi, powerbi]
+    related: [Tableau]
+    resources:
+      - {title: Power BI documentation, url: "https://learn.microsoft.com/en-us/power-bi/"}
+  - name: Excel
+    category: data_science
+    aliases: [microsoft excel, ms excel, advanced excel, spreadsheets]
+    case_sensitive_aliases: [Excel]
+  - name: Jupyter
+    category: data_science
+    aliases: [jupyter, jupyter notebook, jupyter notebooks, jupyterlab]
+  - name: A/B Testing
+    category: data_science
+    aliases: [a/b testing, a/b tests, ab testing, experimentation]
+  - name: Time Series
+    category: data_science
+    aliases: [time series, time-series, time series forecasting, demand forecasting]
+
+  # ---------------- Machine learning ----------------
+  - name: Machine Learning
+    category: machine_learning
+    aliases: [machine learning, machine-learning]
+    case_sensitive_aliases: [ML]
+    resources:
+      - {title: Google Machine Learning Crash Course, url: "https://developers.google.com/machine-learning/crash-course"}
+  - name: Deep Learning
+    category: machine_learning
+    aliases: [deep learning, neural networks, neural network, cnn, cnns, rnn, lstm]
+    resources:
+      - {title: Dive into Deep Learning, url: "https://d2l.ai/"}
+  - name: NLP
+    category: machine_learning
+    aliases: [nlp, natural language processing, text mining, text classification]
+    resources:
+      - {title: Hugging Face Learn, url: "https://huggingface.co/learn"}
+  - name: Computer Vision
+    category: machine_learning
+    aliases: [computer vision, image classification, object detection, image processing]
+  - name: scikit-learn
+    category: machine_learning
+    aliases: [scikit-learn, sklearn, scikit learn]
+    resources:
+      - {title: scikit-learn User Guide, url: "https://scikit-learn.org/stable/user_guide.html"}
+  - name: TensorFlow
+    category: machine_learning
+    aliases: [tensorflow, tf2]
+    related: [PyTorch, Keras]
+    resources:
+      - {title: TensorFlow tutorials, url: "https://www.tensorflow.org/tutorials"}
+  - name: PyTorch
+    category: machine_learning
+    aliases: [pytorch, torch]
+    related: [TensorFlow, Keras]
+    resources:
+      - {title: PyTorch tutorials, url: "https://pytorch.org/tutorials/"}
+  - name: Keras
+    category: machine_learning
+    aliases: [keras]
+    related: [TensorFlow, PyTorch]
+    resources:
+      - {title: Keras getting started, url: "https://keras.io/getting_started/"}
+  - name: XGBoost
+    category: machine_learning
+    aliases: [xgboost, lightgbm, catboost, gradient boosting]
+  - name: Hugging Face
+    category: machine_learning
+    aliases: [hugging face, huggingface, hugging face transformers]
+    resources:
+      - {title: Hugging Face Learn, url: "https://huggingface.co/learn"}
+  - name: LLMs
+    category: machine_learning
+    aliases: [llm, llms, large language models, large language model, generative ai, genai, prompt engineering, rag, retrieval augmented generation]
+  - name: OpenCV
+    category: machine_learning
+    aliases: [opencv]
+    resources:
+      - {title: OpenCV tutorials, url: "https://docs.opencv.org/4.x/d9/df8/tutorial_root.html"}
+  - name: Feature Engineering
+    category: machine_learning
+    aliases: [feature engineering, feature selection]
+  - name: Model Evaluation
+    category: machine_learning
+    aliases: [model evaluation, cross-validation, cross validation, hyperparameter tuning, model validation]
+
+  # ---------------- MLOps & DevOps ----------------
+  - name: Docker
+    category: mlops_devops
+    aliases: [docker, dockerfile, docker compose, docker-compose, containerization, containerisation]
+    resources:
+      - {title: Docker Get Started, url: "https://docs.docker.com/get-started/"}
+  - name: Kubernetes
+    category: mlops_devops
+    aliases: [kubernetes, k8s, eks, aks, gke, helm]
+    resources:
+      - {title: Kubernetes tutorials, url: "https://kubernetes.io/docs/tutorials/"}
+  - name: CI/CD
+    category: mlops_devops
+    aliases: [ci/cd, ci cd, continuous integration, continuous delivery, continuous deployment, ci pipelines, cicd]
+  - name: GitHub Actions
+    category: mlops_devops
+    aliases: [github actions]
+    related: [Jenkins, GitLab CI]
+  - name: Jenkins
+    category: mlops_devops
+    aliases: [jenkins]
+    related: [GitHub Actions, GitLab CI]
+    resources:
+      - {title: Jenkins tutorials, url: "https://www.jenkins.io/doc/tutorials/"}
+  - name: GitLab CI
+    category: mlops_devops
+    aliases: [gitlab ci, gitlab-ci, gitlab ci/cd]
+    related: [GitHub Actions, Jenkins]
+  - name: Terraform
+    category: mlops_devops
+    aliases: [terraform, infrastructure as code, iac]
+    resources:
+      - {title: Terraform tutorials, url: "https://developer.hashicorp.com/terraform/tutorials"}
+  - name: Ansible
+    category: mlops_devops
+    aliases: [ansible]
+  - name: MLflow
+    category: mlops_devops
+    aliases: [mlflow]
+    related: [Weights & Biases, DVC]
+    resources:
+      - {title: MLflow documentation, url: "https://mlflow.org/docs/latest/index.html"}
+  - name: DVC
+    category: mlops_devops
+    aliases: [dvc, data version control]
+    related: [MLflow]
+    resources:
+      - {title: DVC Get Started, url: "https://dvc.org/doc/start"}
+  - name: Weights & Biases
+    category: mlops_devops
+    aliases: [weights & biases, weights and biases, wandb]
+    related: [MLflow]
+  - name: Airflow
+    category: mlops_devops
+    aliases: [airflow, apache airflow]
+    related: [Kubeflow]
+    resources:
+      - {title: Apache Airflow docs, url: "https://airflow.apache.org/docs/"}
+  - name: Kubeflow
+    category: mlops_devops
+    aliases: [kubeflow]
+    related: [Airflow]
+  - name: Model Deployment
+    category: mlops_devops
+    aliases: [model deployment, model serving, deployed models, deploying models, model monitoring]
+  - name: MLOps
+    category: mlops_devops
+    aliases: [mlops, ml ops]
+  - name: Prometheus
+    category: mlops_devops
+    aliases: [prometheus]
+    related: [Grafana]
+  - name: Grafana
+    category: mlops_devops
+    aliases: [grafana]
+    related: [Prometheus]
+  - name: Linux
+    category: tools_practices
+    aliases: [linux, ubuntu, unix]
+    resources:
+      - {title: Ubuntu command line for beginners, url: "https://ubuntu.com/tutorials/command-line-for-beginners"}
+
+  # ---------------- Cloud ----------------
+  - name: AWS
+    category: cloud
+    aliases: [aws, amazon web services, ec2, s3, aws lambda, sagemaker]
+    related: [Azure, GCP]
+    resources:
+      - {title: AWS Getting Started, url: "https://aws.amazon.com/getting-started/"}
+  - name: Azure
+    category: cloud
+    aliases: [azure, microsoft azure]
+    related: [AWS, GCP]
+    resources:
+      - {title: Microsoft Learn - Azure, url: "https://learn.microsoft.com/en-us/training/azure/"}
+  - name: GCP
+    category: cloud
+    aliases: [gcp, google cloud, google cloud platform, bigquery, vertex ai]
+    related: [AWS, Azure]
+    resources:
+      - {title: Google Cloud documentation, url: "https://cloud.google.com/docs"}
+
+  # ---------------- Databases & data engineering ----------------
+  - name: PostgreSQL
+    category: databases
+    aliases: [postgresql, postgres]
+    related: [MySQL, SQL Server]
+    resources:
+      - {title: PostgreSQL Tutorial (official), url: "https://www.postgresql.org/docs/current/tutorial.html"}
+  - name: MySQL
+    category: databases
+    aliases: [mysql, mariadb]
+    related: [PostgreSQL, SQL Server]
+    resources:
+      - {title: MySQL documentation, url: "https://dev.mysql.com/doc/"}
+  - name: SQL Server
+    category: databases
+    aliases: [sql server, mssql, microsoft sql server]
+    related: [PostgreSQL, MySQL]
+  - name: SQLite
+    category: databases
+    aliases: [sqlite]
+  - name: MongoDB
+    category: databases
+    aliases: [mongodb, mongo]
+    related: [NoSQL]
+    resources:
+      - {title: MongoDB manual, url: "https://www.mongodb.com/docs/manual/"}
+  - name: NoSQL
+    category: databases
+    aliases: [nosql, dynamodb, cassandra]
+    related: [MongoDB]
+  - name: Redis
+    category: databases
+    aliases: [redis]
+    resources:
+      - {title: Redis docs, url: "https://redis.io/docs/latest/"}
+  - name: Elasticsearch
+    category: databases
+    aliases: [elasticsearch, elastic search, opensearch]
+  - name: Apache Spark
+    category: databases
+    aliases: [apache spark, spark, pyspark]
+    related: [Hadoop]
+    resources:
+      - {title: Spark Quick Start, url: "https://spark.apache.org/docs/latest/quick-start.html"}
+  - name: Hadoop
+    category: databases
+    aliases: [hadoop, hdfs, hive]
+    related: [Apache Spark]
+  - name: Kafka
+    category: databases
+    aliases: [kafka, apache kafka]
+    resources:
+      - {title: Kafka Quickstart, url: "https://kafka.apache.org/quickstart"}
+  - name: ETL
+    category: databases
+    aliases: [etl, elt, etl pipelines, data warehousing, data warehouse]
+  - name: Snowflake
+    category: databases
+    aliases: [snowflake]
+  - name: dbt
+    category: databases
+    aliases: [dbt, data build tool]
+
+  # ---------------- Tools & practices ----------------
+  - name: Git
+    category: tools_practices
+    aliases: [git, version control]
+    resources:
+      - {title: Pro Git book, url: "https://git-scm.com/book/en/v2"}
+  - name: GitHub
+    category: tools_practices
+    aliases: [github]
+  - name: Agile
+    category: tools_practices
+    aliases: [agile, scrum, kanban, sprint planning]
+    resources:
+      - {title: The Scrum Guide, url: "https://scrumguides.org/"}
+  - name: Jira
+    category: tools_practices
+    aliases: [jira, confluence]
+  - name: Unit Testing
+    category: tools_practices
+    aliases: [unit testing, unit tests, automated tests, pytest, junit, jest, test-driven development, tdd, automated testing, test automation]
+    resources:
+      - {title: pytest documentation, url: "https://docs.pytest.org/"}
+  - name: Selenium
+    category: tools_practices
+    aliases: [selenium, cypress, playwright]
+  - name: Streamlit
+    category: tools_practices
+    aliases: [streamlit]
+    resources:
+      - {title: Streamlit docs, url: "https://docs.streamlit.io/"}
+  - name: Figma
+    category: tools_practices
+    aliases: [figma]
+
+  # ---------------- Mobile ----------------
+  - name: Android
+    category: mobile
+    aliases: [android, android sdk, jetpack compose]
+  - name: iOS
+    category: mobile
+    aliases: [ios, xcode]
+  - name: Flutter
+    category: mobile
+    aliases: [flutter, dart]
+    related: [React Native]
+
+  # ---------------- Soft skills ----------------
+  - name: Communication
+    category: soft_skills
+    aliases: [communication, communication skills, presented, presentations, stakeholder management, written and verbal]
+  - name: Leadership
+    category: soft_skills
+    aliases: [leadership, led a team, team lead, mentored, mentoring, mentorship]
+  - name: Teamwork
+    category: soft_skills
+    aliases: [teamwork, collaboration, collaborated, collaborative, cross-functional]
+  - name: Problem Solving
+    category: soft_skills
+    aliases: [problem solving, problem-solving, analytical thinking, critical thinking]
+  - name: Project Management
+    category: soft_skills
+    aliases: [project management, managed projects, project planning]

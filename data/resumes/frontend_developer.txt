@@ -1,0 +1,20 @@
+Ananya Rao
+ananya.rao@example.com
+
+Summary
+Frontend developer passionate about accessible, fast user interfaces.
+
+Experience
+Frontend Developer, Coho Winery Online    Mar 2022 - Present
+- Built responsive interfaces with Vue.js, HTML and CSS (Sass) for an e-commerce site with 80k users
+- Improved Lighthouse performance scores from 55 to 92 by optimising assets
+- Collaborated with designers using Figma and wrote unit tests with Jest
+
+Web Developer Intern, Margie's Travel    Jun 2021 - Feb 2022
+- Maintained marketing pages using JavaScript, HTML and CSS
+
+Skills
+JavaScript, Vue.js, HTML, CSS, Sass, Figma, Jest, Git
+
+Education
+Bachelor of Science in Information Technology, Hillside University, 2021

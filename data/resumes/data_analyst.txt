@@ -1,0 +1,25 @@
+Rohan Kapoor
+rohan.kapoor@example.com | +1 415 555 0134
+
+Profile
+Detail-oriented data analyst who turns business questions into clear dashboards and recommendations.
+
+Work Experience
+Data Analyst, Tailspin Toys    Feb 2021 - Present
+- Built Power BI and Tableau dashboards used weekly by 40 sales managers
+- Wrote complex SQL queries in SQL Server and Snowflake to analyse revenue trends
+- Automated monthly Excel reporting with Python and Pandas, saving 12 hours per month
+- Collaborated with cross-functional teams to define KPIs and run A/B testing analysis
+
+Junior Analyst, Woodgrove Bank    Jun 2019 - Jan 2021
+- Performed data analysis on customer churn using Excel and statistical analysis
+- Prepared presentations of insights for senior leadership
+
+Skills
+SQL, Excel, Power BI, Tableau, Python, Pandas, Statistics, Data Visualization, Snowflake
+
+Education
+Bachelor of Commerce, Riverside College, 2019
+
+Certifications
+Microsoft Certified: Power BI Data Analyst Associate

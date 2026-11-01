@@ -1,0 +1,13 @@
+# Runtime dependencies (versions verified together on Python 3.11, Windows 11).
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.2
+python-multipart==0.0.33
+pymupdf==2.0
+scikit-learn==1.9.1
+numpy==2.4.6
+pandas==3.1.0
+PyYAML==6.0.3
+streamlit==1.66.1
+plotly==7.1.0
+requests==2.34.2

@@ -1,0 +1,19 @@
+# Python environment and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Local settings and secrets
+.env
+.streamlit/secrets.toml
+.claude/
+.vscode/
+.idea/

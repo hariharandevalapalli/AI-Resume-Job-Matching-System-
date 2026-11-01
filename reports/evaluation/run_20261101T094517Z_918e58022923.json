@@ -1,0 +1,550 @@
+{
+  "variants": {
+    "full_model": {
+      "mean": {
+        "ndcg@3": 1.0,
+        "ndcg@5": 0.987,
+        "map": 1.0,
+        "mrr": 1.0,
+        "precision@3": 0.7778,
+        "spearman": 0.8606
+      },
+      "queries": {
+        "ml_engineer": {
+          "ranking": [
+            {
+              "resume": "ml_engineer_senior",
+              "score": 84.8,
+              "grade": 3.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 61.1,
+              "grade": 2.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 56.8,
+              "grade": 2.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 41.6,
+              "grade": 1.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 41.3,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 30.9,
+              "grade": 1.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 19.4,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 15.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 15.6,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9654913637925913,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 1.0,
+          "spearman": 0.8959786703810408
+        },
+        "fullstack_developer": {
+          "ranking": [
+            {
+              "resume": "fullstack_developer",
+              "score": 86.0,
+              "grade": 3.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 38.9,
+              "grade": 2.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 36.1,
+              "grade": 1.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 35.9,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 22.1,
+              "grade": 1.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 22.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 19.5,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 12.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 10.8,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9955388707359232,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.8440722199302099
+        },
+        "data_analyst": {
+          "ranking": [
+            {
+              "resume": "data_analyst",
+              "score": 82.3,
+              "grade": 3.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 68.0,
+              "grade": 2.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 31.9,
+              "grade": 1.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 25.9,
+              "grade": 0.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 25.5,
+              "grade": 0.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 18.7,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 15.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 15.6,
+              "grade": 0.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 15.4,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.8416254115301731
+        }
+      }
+    },
+    "tfidf_only": {
+      "mean": {
+        "ndcg@3": 1.0,
+        "ndcg@5": 0.987,
+        "map": 1.0,
+        "mrr": 1.0,
+        "precision@3": 0.7778,
+        "spearman": 0.8606
+      },
+      "queries": {
+        "ml_engineer": {
+          "ranking": [
+            {
+              "resume": "ml_engineer_senior",
+              "score": 39.2,
+              "grade": 3.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 20.5,
+              "grade": 2.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 19.2,
+              "grade": 2.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 9.0,
+              "grade": 1.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 7.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 7.5,
+              "grade": 1.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 3.2,
+              "grade": 0.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 2.5,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 2.4,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9654913637925913,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 1.0,
+          "spearman": 0.8959786703810408
+        },
+        "fullstack_developer": {
+          "ranking": [
+            {
+              "resume": "fullstack_developer",
+              "score": 51.7,
+              "grade": 3.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 22.4,
+              "grade": 2.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 12.4,
+              "grade": 1.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 11.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 7.5,
+              "grade": 1.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 5.6,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 4.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 1.5,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 1.1,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9955388707359232,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.8440722199302099
+        },
+        "data_analyst": {
+          "ranking": [
+            {
+              "resume": "data_analyst",
+              "score": 41.1,
+              "grade": 3.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 23.8,
+              "grade": 2.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 5.7,
+              "grade": 1.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 4.2,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 4.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 3.1,
+              "grade": 0.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 2.7,
+              "grade": 0.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 2.5,
+              "grade": 0.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 1.6,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.8416254115301731
+        }
+      }
+    },
+    "skills_only": {
+      "mean": {
+        "ndcg@3": 1.0,
+        "ndcg@5": 0.9739,
+        "map": 1.0,
+        "mrr": 1.0,
+        "precision@3": 0.7778,
+        "spearman": 0.828
+      },
+      "queries": {
+        "ml_engineer": {
+          "ranking": [
+            {
+              "resume": "ml_engineer_senior",
+              "score": 100.0,
+              "grade": 3.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 68.9,
+              "grade": 2.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 61.1,
+              "grade": 2.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 40.6,
+              "grade": 1.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 40.6,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 23.4,
+              "grade": 1.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 6.2,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 0.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 0.0,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9654913637925913,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 1.0,
+          "spearman": 0.8769651056970109
+        },
+        "fullstack_developer": {
+          "ranking": [
+            {
+              "resume": "fullstack_developer",
+              "score": 98.0,
+              "grade": 3.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 35.6,
+              "grade": 2.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 35.3,
+              "grade": 1.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 35.3,
+              "grade": 0.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 15.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 15.1,
+              "grade": 1.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 12.6,
+              "grade": 0.0
+            },
+            {
+              "resume": "data_analyst",
+              "score": 1.7,
+              "grade": 0.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 0.0,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 0.9561583899187893,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.7508730735842791
+        },
+        "data_analyst": {
+          "ranking": [
+            {
+              "resume": "data_analyst",
+              "score": 95.0,
+              "grade": 3.0
+            },
+            {
+              "resume": "data_scientist_junior",
+              "score": 78.5,
+              "grade": 2.0
+            },
+            {
+              "resume": "ml_engineer_senior",
+              "score": 25.8,
+              "grade": 1.0
+            },
+            {
+              "resume": "marketing_specialist",
+              "score": 16.4,
+              "grade": 0.0
+            },
+            {
+              "resume": "backend_python_developer",
+              "score": 15.8,
+              "grade": 0.0
+            },
+            {
+              "resume": "devops_engineer",
+              "score": 5.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "frontend_developer",
+              "score": 0.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "fullstack_developer",
+              "score": 0.0,
+              "grade": 0.0
+            },
+            {
+              "resume": "mobile_developer",
+              "score": 0.0,
+              "grade": 0.0
+            }
+          ],
+          "ndcg@3": 1.0,
+          "ndcg@5": 1.0,
+          "map": 1.0,
+          "mrr": 1.0,
+          "precision@3": 0.6666666666666666,
+          "spearman": 0.8560132129176834
+        }
+      }
+    }
+  },
+  "model_name": "explainable-tfidf-skill-matcher",
+  "model_version": "1.0.0",
+  "config_fingerprint": "918e58022923",
+  "taxonomy_version": "1.0.0",
+  "weights": {
+    "required_skills": 0.45,
+    "preferred_skills": 0.15,
+    "text_similarity": 0.25,
+    "experience": 0.1,
+    "education": 0.05
+  },
+  "via_pdf": false,
+  "queries": 3,
+  "judgments": 27,
+  "timestamp": "2026-11-01T09:45:17+00:00"
+}

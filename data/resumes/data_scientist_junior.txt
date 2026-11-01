@@ -1,0 +1,26 @@
+Priya Nair
+priya.nair@example.com
+
+Summary
+Data scientist with a strong foundation in statistics and machine learning, looking to grow into ML engineering.
+
+Experience
+Data Scientist, Fabrikam Health    Aug 2023 - Present
+- Built patient no-show prediction models with scikit-learn and XGBoost, reducing missed appointments by 9%
+- Performed exploratory data analysis in Python with Pandas and NumPy on 2 million records
+- Created data visualization dashboards in Tableau for clinical operations teams
+- Presented findings to non-technical stakeholders every sprint
+
+Data Science Intern, Litware Labs    Jan 2023 - Jul 2023
+- Ran A/B testing analysis and hypothesis testing for product experiments
+- Wrote SQL queries against PostgreSQL to build reporting tables
+
+Projects
+Sentiment analysis of product reviews using NLP and TensorFlow (Keras), deployed as a Streamlit demo
+Kaggle competition: top 10% in a time series forecasting challenge
+
+Skills
+Python, R, SQL, scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib, Seaborn, Tableau, Jupyter, Git, Statistics
+
+Education
+Bachelor of Science in Statistics, Lakeside University, 2022

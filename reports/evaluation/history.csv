@@ -1,0 +1,4 @@
+timestamp,model_version,config_fingerprint,variant,via_pdf,ndcg@3,ndcg@5,map,mrr,precision@3,spearman
+2026-11-01T09:45:17+00:00,1.0.0,918e58022923,full_model,False,1.0,0.987,1.0,1.0,0.7778,0.8606
+2026-11-01T09:45:17+00:00,1.0.0,918e58022923,tfidf_only,False,1.0,0.987,1.0,1.0,0.7778,0.8606
+2026-11-01T09:45:17+00:00,1.0.0,918e58022923,skills_only,False,1.0,0.9739,1.0,1.0,0.7778,0.828

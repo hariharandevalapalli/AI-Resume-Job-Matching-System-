@@ -1,0 +1,27 @@
+{
+  "models": {
+    "1.0.0+918e58022923": {
+      "model_name": "explainable-tfidf-skill-matcher",
+      "model_version": "1.0.0",
+      "config_fingerprint": "918e58022923",
+      "taxonomy_version": "1.0.0",
+      "weights": {
+        "required_skills": 0.45,
+        "preferred_skills": 0.15,
+        "text_similarity": 0.25,
+        "experience": 0.1,
+        "education": 0.05
+      },
+      "last_evaluated": "2026-11-01T09:45:17+00:00",
+      "metrics": {
+        "ndcg@3": 1.0,
+        "ndcg@5": 0.987,
+        "map": 1.0,
+        "mrr": 1.0,
+        "precision@3": 0.7778,
+        "spearman": 0.8606
+      },
+      "report": "run_20261101T094517Z_918e58022923.json"
+    }
+  }
+}

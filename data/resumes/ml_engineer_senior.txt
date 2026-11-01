@@ -1,0 +1,28 @@
+Aarav Mehta
+aarav.mehta@example.com | +91 98765 43210 | linkedin.com/in/aarav-example
+
+Professional Summary
+Machine learning engineer with 5 years of experience designing, training and deploying production ML systems. Comfortable owning the full lifecycle from data pipelines to model monitoring.
+
+Experience
+Senior Machine Learning Engineer, Northwind Analytics    Mar 2022 - Present
+- Built and deployed demand forecasting models with PyTorch and scikit-learn serving 3 million predictions per day
+- Designed a feature store and training pipelines with Apache Airflow and PostgreSQL, cutting retraining time by 60%
+- Containerised model services with Docker and deployed them on Kubernetes (EKS) in AWS
+- Introduced MLflow for experiment tracking and model registry across 4 teams
+- Mentored 3 junior engineers and led code reviews
+
+Machine Learning Engineer, Contoso Retail    Jul 2020 - Feb 2022
+- Developed NLP models for product categorisation using Hugging Face transformers, improving accuracy by 14%
+- Exposed models through FastAPI REST APIs with automated unit tests (pytest) and CI/CD on GitHub Actions
+- Wrote SQL and Python ETL jobs processing 50 GB of data daily
+
+Projects
+Open-source resume parser: text classification with TF-IDF and logistic regression, 400+ GitHub stars
+
+Skills
+Python, SQL, PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, Docker, Kubernetes, AWS, MLflow, Airflow, Git, Linux
+
+Education
+Master of Science in Computer Science, State University, 2020
+B.Tech in Information Technology, City Institute of Technology, 2018

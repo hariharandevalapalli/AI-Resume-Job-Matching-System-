@@ -1,0 +1,25 @@
+Machine Learning Engineer
+
+About the role
+We are looking for a Machine Learning Engineer to build and operate ML models that power our forecasting and recommendation products.
+
+Responsibilities
+- Design, train and evaluate machine learning models on large datasets
+- Deploy models to production as scalable services and monitor their performance
+- Build reliable data pipelines and automate model retraining
+- Collaborate with data scientists and backend engineers
+
+Requirements
+- 3+ years of experience building machine learning systems in Python
+- Strong knowledge of scikit-learn and PyTorch or TensorFlow
+- Solid SQL skills and experience with relational databases such as PostgreSQL
+- Experience with Docker and deploying services on AWS
+- Familiarity with CI/CD and writing automated tests
+- Bachelor's degree in Computer Science, Statistics or a related field
+
+Nice to have
+- Experience with MLflow, Airflow or Kubernetes
+- NLP experience is a plus
+
+Benefits
+- Flexible hours, learning budget and health insurance

@@ -1,0 +1,54 @@
+# Hand-labelled relevance judgments for the evaluation framework.
+#
+# Grades: 3 = strong fit, 2 = reasonable fit, 1 = weak / partial fit, 0 = not a fit.
+# Labels were assigned by the project author from the resume contents before
+# looking at model scores. The dataset is small and synthetic: it checks that
+# the ranking behaves sensibly and detects regressions; it does not prove
+# real-world hiring validity.
+
+version: "1.0.0"
+resume_dir: data/resumes
+job_dir: data/job_descriptions
+relevant_threshold: 2   # grade >= this counts as "relevant" for MAP / MRR / precision
+# Fixed "today" so experience computed from "Present" dates is reproducible.
+reference_date: "2026-11-01"
+
+queries:
+  ml_engineer:
+    job_file: ml_engineer.txt
+    labels:
+      ml_engineer_senior: 3
+      data_scientist_junior: 2
+      backend_python_developer: 2
+      devops_engineer: 1
+      data_analyst: 1
+      fullstack_developer: 0
+      frontend_developer: 0
+      mobile_developer: 0
+      marketing_specialist: 0
+
+  fullstack_developer:
+    job_file: fullstack_developer.txt
+    labels:
+      fullstack_developer: 3
+      frontend_developer: 2
+      backend_python_developer: 1
+      mobile_developer: 1
+      devops_engineer: 0
+      ml_engineer_senior: 0
+      data_scientist_junior: 0
+      data_analyst: 0
+      marketing_specialist: 0
+
+  data_analyst:
+    job_file: data_analyst.txt
+    labels:
+      data_analyst: 3
+      data_scientist_junior: 2
+      ml_engineer_senior: 1
+      backend_python_developer: 0
+      fullstack_developer: 0
+      frontend_developer: 0
+      devops_engineer: 0
+      mobile_developer: 0
+      marketing_specialist: 0

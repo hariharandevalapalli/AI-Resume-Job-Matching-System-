@@ -1,0 +1,20 @@
+Meera Joshi
+meera.joshi@example.com
+
+Summary
+Mobile developer building native Android and iOS apps.
+
+Experience
+Mobile Developer, Wingtip Apps    Jul 2021 - Present
+- Built Android apps in Kotlin with Jetpack Compose and iOS apps in Swift and SwiftUI
+- Integrated REST APIs and offline storage with SQLite for 150k users
+- Published 6 apps to the Play Store and App Store
+
+Junior Developer, Lucerne Publishing    Aug 2020 - Jun 2021
+- Maintained a Flutter app and fixed bugs reported by users
+
+Skills
+Kotlin, Swift, Android, iOS, Flutter, SQLite, Git, Java
+
+Education
+Bachelor of Technology in Computer Science, South Point University, 2020

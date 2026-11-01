@@ -1,0 +1,20 @@
+Data Analyst
+
+About us
+We are a fast-growing retail company that relies on data to make decisions.
+
+The role
+You will turn raw data into insights for our sales and operations teams, building dashboards and answering business questions.
+
+Requirements
+- 2+ years of experience in data analysis
+- Advanced SQL skills
+- Experience building dashboards in Tableau or Power BI
+- Strong Excel skills and solid understanding of statistics
+- Excellent communication skills and ability to present findings to stakeholders
+- Bachelor's degree in a quantitative field, business or economics
+
+Nice to have
+- Python with Pandas for data analysis
+- Experience with Snowflake or another cloud data warehouse
+- A/B testing experience is a plus

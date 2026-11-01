@@ -1,0 +1,23 @@
+Full Stack Web Developer
+
+We are hiring a Full Stack Developer to build features across our web platform, from polished user interfaces to reliable APIs.
+
+What you will do
+- Build responsive, accessible user interfaces with React and TypeScript
+- Design and implement REST APIs with Node.js
+- Model data in PostgreSQL or MongoDB
+- Write unit and end-to-end tests and take part in code reviews
+
+Requirements
+- 2+ years of professional experience with JavaScript and React
+- Experience building backend services with Node.js and Express.js
+- Good understanding of HTML, CSS and REST APIs
+- Experience with Git and Agile development
+
+Preferred qualifications
+- Next.js and GraphQL experience
+- Familiarity with Docker and CI/CD pipelines
+- Experience with Tailwind CSS is a bonus
+
+What we offer
+- Remote-friendly team, conference budget
